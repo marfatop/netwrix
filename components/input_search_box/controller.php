@@ -1,13 +1,13 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT']."/components/".basename(__DIR__)."/model.php";
-
-class cpartners{
+//require_once $_SERVER['DOCUMENT_ROOT']."/components/".basename(__DIR__)."/model.php";
+require_once $_SERVER['DOCUMENT_ROOT']."/components/input_select_box/model.php";
+class cinput_search_box{
 
     function getData($params){
        // var_dump($params);
-        $db= mpartners::getInstance();
+        $db= minput_select_box::getInstance();
         $sort=['field'=>$params['sort_field'], 'direction'=>$params['sort_direction']];
-        $data=$db::selectRows($params['tbl'],$params['fields'], $params['condition'], $sort);
+     //   $data=$db::selectUniqRows($params['tbl'],$params['fields'], $params['condition'], $sort);
 
         if(empty($data['error'])){
             $res=$data;
@@ -15,7 +15,7 @@ class cpartners{
         else{
             $res=$this->getError($data);
             var_dump($res);
-          //  throw new Exception($res);
+            throw new Exception($res);
             //var_dump($res);
         }
 

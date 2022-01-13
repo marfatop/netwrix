@@ -1,14 +1,17 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT']."/components/".basename(__DIR__)."/model.php";
+require_once$_SERVER['DOCUMENT_ROOT']. "/components/data_select_box/model.php";
+
 
 class cdata_select_box{
 
     function getData($params){
-       // var_dump($params);
-        $db=new mdata_select_box();
+
+        $db= mdata_select_box::getInstance();
+
         $sort=['field'=>$params['sort_field'], 'direction'=>$params['sort_direction']];
         $data=$db::selectUniqRows($params['tbl'],$params['fields'], $params['condition'], $sort);
-
+        // var_dump($params);
+        //$data=[];
         if(empty($data['error'])){
             $res=$data;
         }

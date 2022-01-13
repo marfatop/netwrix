@@ -19,12 +19,7 @@ $GLOBALS['scripts'][] = "templates/" . basename(__DIR__) . "/script.js";
         </div>
         <div class="section-search">
             <div class="section-search-container">
-                <div class="input-group mb-3">
-                    <input type="search" class="form-control section-search-input" placeholder="Search" aria-describedby="search-btn">
-                    <span class="input-group-text" id="search-btn"><i class="fa fa-search"></i></span>
-                </div>
-<!--                <input class="input-search" type="search">-->
-<!--                <span class="icon"><i class="fa fa-search"></i></span>-->
+                    <?=$view->showComponent('input_search_box');?>
             </div>
             <div class="section-search-list">
                 <!--   item        -->

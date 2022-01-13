@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/config.php';
 class MDatabase
 {
     private static $instance, $arr_connect;
@@ -45,8 +45,6 @@ class MDatabase
                 PDO::ATTR_EMULATE_PREPARES   => false,
             ];
             self::$DBH = new PDO($dsn, $user, $pass, $opt);
-
-
         }
         catch(PDOException $e) {
             self::$DBH= $e->getMessage();
@@ -57,6 +55,24 @@ class MDatabase
      static function disconnect ()
     {
         self::$DBH = null;
+    }
+
+    public static function selectColumnUniq($tbl, $column, $sort=null){
+        $s=!empty($sort) ? ' ORDER BY '.$sort['field'] .' '.$sort['direction']  : null;
+        $q='SELECT DISTINCT '.$column. ' FROM '.$tbl.'  ' .$s ;
+       // var_dump(self::$DBH);
+        $stm=self::$DBH->prepare($q);
+        $stm->execute();
+
+        try {
+            $data = $stm->fetchAll(PDO::FETCH_COLUMN);
+        }
+        catch(PDOException $e) {
+            $data['error'] = $e->getMessage();
+            $data['sql']=$q;
+            file_put_contents('PDOErrors.txt', $e->getMessage().PHP_EOL, FILE_APPEND);
+        }
+        return $data;
     }
 
     public static function selectUniqRows($tbl, $colums, $conditions=null, $sort=null){
@@ -83,11 +99,12 @@ class MDatabase
         $w=!empty($conditions) ? ' WHERE '.implode(" ",$conditions) : null;
         $s=!empty($sort) ? ' ORDER BY '.$sort['field'] .' '.$sort['direction']  : null;
         $q='SELECT '.implode(",",$colums). ' FROM '.$tbl.'  '.$w .$s ;
+        file_put_contents('PDOErrors.txt', $q.PHP_EOL, FILE_APPEND);
 
-        $stm=self::$DBH->prepare($q);
-        $stm->execute();
 
         try {
+            $stm=self::$DBH->prepare($q);
+            $stm->execute();
             $data = $stm->fetchAll(PDO::FETCH_ASSOC);
         }
         catch(PDOException $e) {

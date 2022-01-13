@@ -35,8 +35,7 @@ class view
             $component=ob_get_clean();
         }
         else{
-
-            $component='Error no component '. $component;
+            $component='Error no component '. $component. 'path: '.$path;
         }
         return $component;
     }

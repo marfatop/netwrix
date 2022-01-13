@@ -1,0 +1,50 @@
+SELECT * FROM partner_locator   WHERE status LIKE '%Distributor%' AND   LIKE '%%'   states_covered LIKE '%AK%'  ORDER BY company asc
+SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'LIKE '%%'   states_covered LIKE '%AK%'  ORDER BY company asc' at line 1
+SELECT * FROM partner_locator   WHERE status LIKE '%Distributor%' AND  states_covered LIKE '%AL%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Distributor%' AND  states_covered LIKE '%AK%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Distributor%' AND  states_covered LIKE '%CA%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Distributor%' AND  countries_covered LIKE '%AF%' AND  states_covered LIKE '%CA%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Distributor%' AND  countries_covered LIKE '%CA%' AND  states_covered LIKE '%CA%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE countries_covered LIKE '%AF%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE countries_covered LIKE '%CA%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE countries_covered LIKE '%CA%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Premium Partner%' AND  countries_covered LIKE '%US%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Premium Partner%' AND  countries_covered LIKE '%AF%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Premium Partner%' AND  countries_covered LIKE '%US%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Distributor%' AND  countries_covered LIKE '%AF%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Distributor%' AND  countries_covered LIKE '%CA%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Distributor%' AND  countries_covered LIKE '%US%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Distributor%' AND  countries_covered LIKE '%CA%'  ORDER BY company asc
+SELECT * FROM partner_locator   ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%MSP Partner%'  ORDER BY company asc
+SELECT * FROM partner_locator   ORDER BY company asc
+SELECT * FROM partner_locator   ORDER BY company asc
+SELECT * FROM partner_locator   ORDER BY company asc
+SELECT * FROM partner_locator   ORDER BY company asc
+SELECT * FROM partner_locator   ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Premium Partner%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Preferred Partner%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Preferred Partner%' AND  countries_covered LIKE '%AF%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Preferred Partner%' AND  countries_covered LIKE '%AL%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Preferred Partner%' AND  countries_covered LIKE '%US%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Preferred Partner%' AND  countries_covered LIKE '%US%' AND  states_covered LIKE '%CA%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Preferred Partner%' AND  countries_covered LIKE '%US%' AND  states_covered LIKE '%AZ%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Preferred Partner%' AND  countries_covered LIKE '%US%' AND  states_covered LIKE '%GA%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Preferred Partner%' AND  countries_covered LIKE '%US%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE status LIKE '%Preferred Partner%' AND  countries_covered LIKE '%US%' AND  states_covered LIKE '%IL%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE countries_covered LIKE '%CA%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE countries_covered LIKE '%AF%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE countries_covered LIKE '%AF%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE countries_covered LIKE '%AF%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE countries_covered LIKE '%CA%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE countries_covered LIKE '%AF%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE company LIKE '%x%' OR  address LIKE '%x%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE company LIKE '%z%' OR  address LIKE '%z%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE company LIKE '%z%' OR  address LIKE '%z%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE company LIKE '%z%' OR  address LIKE '%z%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE company LIKE '%я%' OR  address LIKE '%я%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE company LIKE '%a%' OR  address LIKE '%a%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE company LIKE '%z%' OR  address LIKE '%z%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE company LIKE '%я%' OR  address LIKE '%я%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE company LIKE '%я%' OR  address LIKE '%я%'  ORDER BY company asc
+SELECT * FROM partner_locator   WHERE company LIKE '%я%' OR  address LIKE '%я%'  ORDER BY company asc
